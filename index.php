@@ -1,5 +1,5 @@
 <?php
-$end = $_GET['end'];
+$end = $_POST['end'];
 $url = "https://chat.miauuapi.com/$end";
 $ch = curl_init(); // INICIA CONEXÃO
 curl_setopt($ch, CURLOPT_URL, $url); // LIGAÇÃO COM O LINK
