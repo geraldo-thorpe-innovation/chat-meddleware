@@ -1,6 +1,8 @@
 <?php
+$end = $_GET['end'];
+$url = "https://chat.miauuapi.com/$end";
 $ch = curl_init(); // INICIA CONEXÃO
-curl_setopt($ch, CURLOPT_URL, "https://chat.miauuapi.com/rooms"); // LIGAÇÃO COM O LINK
+curl_setopt($ch, CURLOPT_URL, $url); // LIGAÇÃO COM O LINK
 
 $hr = array("authorization: giwXuRY4ucOqQvz2g08OhMy89KxxZrv0");
 
@@ -13,4 +15,3 @@ $response = curl_exec($ch);
 curl_close($ch);
 
 echo $response;
-// print_r($response);
